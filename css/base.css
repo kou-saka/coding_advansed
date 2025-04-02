@@ -34,6 +34,21 @@ body {
 	box-sizing: border-box;
 }
 
-p {
-	color: #c30;
+/* !importantでbootstrapより強くなる */
+.slimnavbar {
+	padding-top: 0rem !important; 
+	padding-bottom: 0rem !important;
+	background-color: lightgray;
 }
+
+.slimtext {
+	padding-top: 0rem !important; 
+	padding-bottom: 0rem !important;
+}
+
+button.btn {
+	background-color: rgb(233, 233, 233);
+	color: black;
+	/* border: 0px; */
+}
+
