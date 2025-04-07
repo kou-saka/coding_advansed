@@ -116,14 +116,33 @@ button.btn {
 	margin-bottom: 6vh;
 }
 
+/* スマホ対応 */
+@media screen and (max-width: 900px) {
+	.photocontainer {
+	  display: block; 
+	  text-align: center;
+	}
+  
+	.photocontainer img, .photocontainer p {
+	  width: 80% !important;
+	  margin: 0 auto;
+	}
+  
+	.photocontainer p {
+	  margin-top: 1rem;
+	}
+  }
+  
+
 .photocontainer img {
 	width: 50%;
 	height: auto;
+	/* object-fit: cover; */
 }
 
 
 .photocontainer p {
-	width: 41%;
+	/* width: 41%; */
 	margin-top: 0.5rem; /*startで揃いすぎてたから少し下げた*/
 }
 
@@ -165,6 +184,27 @@ button.btn {
 	object-fit: cover;
 }
 
+/* 住所部分スマホ向け */
+@media screen and (max-width: 900px) {
+	.address {
+	  flex-direction: column;
+	  padding: 0 0;
+	  gap: 2rem;
+	}
+  
+	.address-text, .address-photo {
+	  width: 100%;
+	  padding: 0;
+	}
+  
+	.address-photo img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	}
+  }
+  
+
 .list{
 	display: flex;
 	width: 80%;
@@ -184,6 +224,14 @@ button.btn {
 	font-size: x-large;
 	margin-top: 10px;
 }
+
+@media screen and (max-width: 900px) {
+	.list-title,
+	.list {
+	  display: none;
+	}
+  }
+  
 
 .swiper {
 	width: 100%;

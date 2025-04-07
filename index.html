@@ -168,10 +168,10 @@
         <div class="infomation fade-in">
             <div class="address">
                 <div class="address-text">
-                    <p class="info-top">Adoress</p>
+                    <p class="info-top">　Adoress</p>
                     <p>681 xxxx Drive, xxxxx xxxx #01 - 06 000000</p>
                     <p>Opening Hours</p>
-                    <p class="info-top">Mondays - Friday:10am - 9pm</p>
+                    <p class="info-top">　Mondays - Friday:10am - 9pm</p>
                     <p>Saturdays, Sundays & Public Holidays: 9am- 9pm</p>
                 </div>
                 <div class="address-photo">
@@ -218,19 +218,28 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+        // これで写真二枚ずつ表示で一枚ずつづれる表示
         const swiper = new Swiper(".mySwiper", {
-          slidesPerView: 2,
-          spaceBetween: 0,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-          },
-          slidesPerGroup: 1,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+            },
+            slidesPerGroup: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                slidesPerView: 1,
+                },
+                // 900px以上で2枚表示
+                900: {
+                slidesPerView: 2,
+                },
+            },
         });
+
     </script>
     <script>
         //これでfead-inクラスつけた場所がフェードインする
