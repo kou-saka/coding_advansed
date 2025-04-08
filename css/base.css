@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	background-color: #FFEFD5;
+}
+/* !importantでbootstrapより強くなる */
+.slimnavbar {
+	padding-top: 0rem !important; 
+	padding-bottom: 0rem !important;
+	background-color: lightgray;
+}
+
+.slimtext {
+	padding-top: 0rem !important; 
+	padding-bottom: 0rem !important;
+}
+
+button.btn {
+	background-color: rgb(233, 233, 233);
+	color: black;
+}
+
+.info {
+	font-size: 1.9rem;
+	margin-bottom: 0.4rem;
+}
+
+/* ボタン押したときにBootstrapのデフォルトで青色になる対策 */
+.btn-custom {
+	background-color: #FFC7AF !important;
+	box-shadow: none !important;
+	outline: none !important;
+	color: black !important;
+	border-bottom: 1px solid darkgray !important;
+}
+
+/* これの中身はわからないけどborderがはみ出るから消す */
+.accordion-item {
+	border: none !important;
+	background-color: #FFEFD5 !important;
+}
+
+.ps-6 {
+	padding-left: 5rem !important;
+}
+
+.disc li {
+	list-style-type: disc; /*黒点つける*/
+	margin-bottom: 0.6rem;
+}
+
+/* ボタンとリストをまとめて、文字開始位置がずれないように */
+/* widthで親の横幅を100％にして、それに対してmax-widthボタン自体の幅を80vw */
+.container-custom {
+	width: 100%;
+	max-width: 80vw;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.accordion-body {
+	padding: 0.4rem 0 !important; /* ボタンと一個目のリストの間を埋める */
+}
+
+/* ここから写真のゾーン */
+.photo {
+	margin: 5vh auto;
+	width: 80%;		/*ここで横幅を決める*/
+}
+
+
+.phototext {
+	font-size: 1.7rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem; /*remは文字に対しての比率*/
+}
+
+.photocontainer {
+	display: flex;
+	gap: 2rem; /*2文字分間をあける*/
+	align-items: start; /*startで写真の上と文字の場所が揃う*/
+	margin-bottom: 6vh;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 900px) {
+	.photocontainer {
+	  display: block; 
+	  text-align: center;
+	}
+  
+	.photocontainer img, .photocontainer p {
+	  width: 80% !important;
+	  margin: 0 auto;
+	}
+  
+	.photocontainer p {
+	  margin-top: 1rem;
+	}
+  }
+  
+
+.photocontainer img {
+	width: 50%;
+	height: auto;
+	/* object-fit: cover; */
+}
+
+
+.photocontainer p {
+	/* width: 41%; */
+	margin-top: 0.5rem; /*startで揃いすぎてたから少し下げた*/
+}
+
+/*ここから店舗情報*/
+.infomation {
+	margin: 0 auto;
+	width: 82%;
+}
+
+.address {
+	display: flex;
+	justify-content: space-between; /*左寄せと右寄せ*/
+	align-items: center;
+	background-color: black;
+	color: white;
+	padding: 3vh 3vw;
+	gap: 3rem;
+}
+
+.address-text {
+	width: 50%;
+	font-size: 0.8rem;
+}
+
+.info-top {
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.address-photo {
+	width: 50%;
+	padding: 0.1rem;
+}
+
+.address-photo img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* 住所部分スマホ向け */
+@media screen and (max-width: 900px) {
+	.address {
+	  flex-direction: column;
+	  padding: 0 0;
+	  gap: 2rem;
+	}
+  
+	.address-text, .address-photo {
+	  width: 100%;
+	  padding: 0;
+	}
+  
+	.address-photo img {
+	  width: 100%;
+	  height: auto;
+	  display: block;
+	}
+  }
+  
+
+.list{
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	gap: 2rem;
+}
+
+.list img{
+	width: 150px;
+	height: 150px;
+	line-height: 200px;
+	border-radius: 50%;
+}
+
+.list-title {
+	text-align: center;
+	font-size: x-large;
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+	.list-title,
+	.list {
+	  display: none;
+	}
+  }
+  
+
+.swiper {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+  }
+  
+  .swiper-slide img {
+	width: 100%;
+	height: 50vh;
+	object-fit: cover;
+	display: block;
+  }
+
+  .fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 1.5s ease;
+  }
+  
+  .fade-in.active {
+	opacity: 1;
+	transform: translateY(0);
+  }
+  
+  
+  
+  
